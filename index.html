@@ -171,5 +171,19 @@
   <p style="margin-top:8px;font-size:13px"><a href="mailto:cravinadventure@gmail.com">cravinadventure@gmail.com</a></p>
 </footer>
 
+<script>
+(function(){
+  var v=document.querySelector('video');
+  if(!v)return;
+  v.muted=true; v.defaultMuted=true; v.setAttribute('muted','');
+  var tryPlay=function(){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} };
+  tryPlay();
+  document.addEventListener('DOMContentLoaded',tryPlay);
+  window.addEventListener('load',tryPlay);
+  var once=function(){ v.muted=true; tryPlay(); ['touchstart','click','scroll','keydown'].forEach(function(e){document.removeEventListener(e,once);}); };
+  ['touchstart','click','scroll','keydown'].forEach(function(e){document.addEventListener(e,once,{passive:true});});
+})();
+</script>
+
 </body>
 </html>
