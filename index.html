@@ -3,87 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study: LUCA IMMERSIVE · Cravin' Adventure Studios</title>
+<title>Journey of Creation · LUCA IMMERSIVE · Cravin' Adventure Studios</title>
 <style>
   :root{--electric:#6C5CE7;--violet:#4A3BAD;--charcoal:#12121f;--ink:#0b0b14;--paper:#f4f3fb;--muted:#9a98b5;--line:rgba(108,92,231,.22);--good:#39d98a}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--ink);color:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  .wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .wide{max-width:1240px;margin:0 auto;padding:0 48px}
   a{color:inherit}
 
-  nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 28px;background:radial-gradient(55% 160% at 50% 50%, rgba(108,92,231,.42), rgba(11,11,20,.88) 70%);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  nav .brand{font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase}
+  nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 28px;background:radial-gradient(55% 160% at 50% 50%, rgba(108,92,231,.42), rgba(11,11,20,.9) 70%);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .brand{font-weight:800;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase}
   nav .brand span{color:var(--electric)}
-  nav .tag{font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
+  nav .tag{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
 
-  .hero{text-align:center;padding:90px 0 44px;background:radial-gradient(900px 440px at 50% -10%, rgba(108,92,231,.32), transparent 70%),linear-gradient(180deg,#15152a 0%,var(--ink) 100%)}
-  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--electric);margin-bottom:20px}
-  .hero h1{font-size:clamp(40px,7vw,76px);line-height:1.02;font-weight:800;letter-spacing:-1.5px;max-width:980px;margin:0 auto}
-  .hero .sub{max-width:720px;margin:22px auto 0;color:var(--muted);font-size:clamp(17px,2.4vw,22px)}
+  .k{font-size:12px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--electric);margin-bottom:14px}
 
-  section{padding:58px 0;border-top:1px solid rgba(108,92,231,.08)}
-  .shead{text-align:center;max-width:760px;margin:0 auto 44px}
-  .shead .k{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--electric);margin-bottom:12px}
-  .shead h2{font-size:clamp(25px,3.8vw,36px);font-weight:800;letter-spacing:-.4px;line-height:1.12}
-  .shead p{margin-top:14px;color:var(--muted);font-size:16px}
+  .hero{padding:58px 0 34px;background:radial-gradient(1100px 480px at 16% -20%, rgba(108,92,231,.30), transparent 65%),linear-gradient(180deg,#14142a 0%,var(--ink) 100%)}
+  .hero h1{font-size:clamp(40px,6.4vw,74px);line-height:1.0;font-weight:800;letter-spacing:-1.6px;max-width:15ch}
+  .hero .sub{max-width:640px;margin-top:18px;color:#cdccdf;font-size:clamp(17px,1.7vw,21px);line-height:1.45}
+  .hero .meta{margin-top:22px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
 
-  .client{display:flex;align-items:center;justify-content:center;gap:24px;text-align:left}
-  .client .ph{width:96px;height:96px;border-radius:50%;flex:none;border:1px solid var(--line);background-size:cover;background-position:center}
-  .client .ctype{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--electric);border:1px solid var(--line);border-radius:30px;padding:4px 11px;margin-bottom:9px}
-  .client b{display:block;font-size:24px;letter-spacing:-.3px}
-  .client .d{font-size:15px;color:#cdccdf;max-width:430px;margin-top:9px;line-height:1.55}
+  section{padding:40px 0;border-top:1px solid rgba(108,92,231,.09)}
+  .lh{max-width:760px;margin-bottom:4px}
+  .lh h2{font-size:clamp(26px,3vw,40px);font-weight:800;letter-spacing:-.6px;line-height:1.08;margin-bottom:12px}
+  .lh p{color:var(--muted);font-size:17px;line-height:1.6;max-width:620px}
+  .statement{font-size:clamp(22px,2.5vw,32px);font-weight:700;line-height:1.3;letter-spacing:-.4px;max-width:920px;color:var(--paper)}
+  .statement .em{color:var(--electric)}
 
-  .lead{max-width:860px;margin:0 auto;font-size:clamp(17px,1.9vw,20px);line-height:1.65;color:#d6d5e6;text-align:center}
-
-  .wide{max-width:1200px;margin:0 auto;padding:0 40px}
-  .split{display:flex;align-items:center;gap:56px;padding:44px 0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:34px 0}
   .split + .split{border-top:1px solid rgba(108,92,231,.10)}
-  .split:nth-of-type(even){flex-direction:row-reverse}
-  .split .sv{flex:1 1 0;min-width:0;display:flex;justify-content:center}
-  .split .st{flex:1 1 0;min-width:0}
-  .wf{width:100%;max-width:360px;aspect-ratio:1/1;border:1px solid var(--line);border-radius:18px;background:radial-gradient(circle at 50% 42%, rgba(108,92,231,.10), var(--charcoal));display:flex;align-items:center;justify-content:center;padding:30px}
+  .sv{display:flex;min-width:0}
+  .split.vl .sv{justify-content:flex-end}
+  .split.vr .sv{justify-content:flex-start}
+  .st{min-width:0}
+  .st .num{font-size:13px;font-weight:800;letter-spacing:1.6px;color:var(--electric);margin-bottom:10px}
+  .st h2,.st h4{font-size:clamp(24px,2.7vw,36px);font-weight:800;letter-spacing:-.5px;line-height:1.08;margin-bottom:14px}
+  .st p{font-size:clamp(15.5px,1.2vw,17.5px);line-height:1.66;color:#cdccdf;max-width:520px}
+
+  .wf{width:100%;max-width:440px;aspect-ratio:1/1;border:1px solid var(--line);border-radius:18px;background:radial-gradient(circle at 50% 42%, rgba(108,92,231,.10), var(--charcoal));display:flex;align-items:center;justify-content:center;padding:34px}
   .wf svg{width:100%;height:100%;stroke:var(--electric);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-  .st .num{font-size:13px;font-weight:800;letter-spacing:1.6px;color:var(--electric);margin-bottom:12px}
-  .st h4{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.4px;line-height:1.12;margin-bottom:14px}
-  .st p{font-size:clamp(16px,1.5vw,18px);line-height:1.7;color:#cdccdf;max-width:560px}
-  .vid{width:100%;max-width:330px}
+  .logobox{width:100%;max-width:300px;aspect-ratio:1/1;border:1px solid var(--line);border-radius:18px;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .logobox img{width:78%;height:78%;object-fit:contain}
+  .vid{width:100%;max-width:380px}
   .vid video{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);background:#000}
-  .vid .cap{text-align:center;color:#9a98b5;font-size:12.5px;margin-top:10px;letter-spacing:.3px}
+  .vid .cap{color:#9a98b5;font-size:12.5px;margin-top:10px;letter-spacing:.3px}
+
   .rgb{transform-box:fill-box;transform-origin:center}
   .rgb.r{animation:rgbR 2.6s ease-in-out infinite}
   .rgb.b{animation:rgbB 2.6s ease-in-out infinite}
   @keyframes rgbR{0%,100%{transform:translate(-5px,-4px)}50%{transform:translate(-13px,-9px)}}
   @keyframes rgbB{0%,100%{transform:translate(5px,4px)}50%{transform:translate(13px,9px)}}
-  @media(max-width:820px){.split,.split:nth-of-type(even){flex-direction:column;gap:26px;text-align:center} .st p{margin:0 auto} .wf{max-width:300px}}
-  @media(prefers-reduced-motion:reduce){.rgb{animation:none}}
 
-  .flow{max-width:640px;margin:0 auto;display:flex;flex-direction:column}
-  .frow{display:flex;gap:20px}
-  .frail{display:flex;flex-direction:column;align-items:center;width:38px;flex:0 0 38px}
-  .fdot{width:38px;height:38px;border-radius:50%;background:var(--charcoal);border:2px solid var(--electric);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--electric);flex:0 0 38px}
-  .fline{flex:1;width:2px;background:linear-gradient(var(--electric),rgba(108,92,231,.18))}
-  .fbox{flex:1;padding-bottom:28px}
-  .fbox h4{font-size:18px;font-weight:700;margin-bottom:6px}
-  .fbox p{font-size:14.5px;color:#cdccdf;line-height:1.6}
-  .frow:last-child .fline{display:none}
-  .frow:last-child .fbox{padding-bottom:0}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding:6px 0}
+  .row2 .lcol h2{font-size:clamp(24px,2.7vw,36px);font-weight:800;letter-spacing:-.5px;line-height:1.1;margin-bottom:12px}
+  .row2 .lcol p{color:var(--muted);font-size:15.5px;line-height:1.6;max-width:480px}
+  .row2 .rcol p{font-size:clamp(16px,1.3vw,18px);line-height:1.7;color:#d6d5e6}
+  .row2 .rcol .quote{font-weight:700}
 
-  .quote{max-width:960px;margin:0 auto;text-align:center;font-size:clamp(24px,4vw,40px);font-weight:800;line-height:1.25;letter-spacing:-.6px}
-  .quote .em{color:var(--electric)}
-
-  .collab{max-width:760px;margin:0 auto;list-style:none}
-  .collab li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 2px;border-bottom:1px solid var(--line)}
+  .collab{list-style:none}
+  .collab li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--line)}
   .collab li:last-child{border-bottom:0}
   .collab .nm{font-size:15.5px;font-weight:600;color:var(--paper)}
-  .collab .ro{font-size:13.5px;color:var(--muted)}
+  .collab .ro{font-size:13.5px;color:var(--muted);text-align:right}
   .collab a{color:var(--electric);text-decoration:none}
 
-  footer{padding:52px 0 70px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
+  footer{padding:44px 0 64px;border-top:1px solid var(--line);color:var(--muted)}
   footer .brand{font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--paper);font-size:14px}
   footer a{color:var(--electric);text-decoration:none}
+  footer .fr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13px}
 
-  @media(max-width:480px){.client{flex-direction:column;text-align:center} .client .d{text-align:center}}
+  @media(max-width:820px){
+    .wide{padding:0 24px}
+    .split,.row2{grid-template-columns:1fr;gap:22px;padding:26px 0}
+    .split .sv{order:-1;justify-content:flex-start}
+    .split.vl .sv,.split.vr .sv{justify-content:flex-start}
+    .st p,.row2 .lcol p{max-width:none}
+    .hero{padding:40px 0 28px}
+  }
 </style>
 </head>
 <body>
@@ -95,135 +92,133 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">LUCA IMMERSIVE · Journey of Creation</div>
+  <div class="wide">
+    <div class="k">LUCA IMMERSIVE · Journey of Creation</div>
     <h1>The crowd became the visuals.</h1>
     <p class="sub">A live, interactive experience where the audience's own light fed the projections in real time.</p>
-    <p style="margin-top:22px;font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9a98b5">West End Johnnie's Underground, Boston &nbsp;&middot;&nbsp; February 1, 2025 &nbsp;&middot;&nbsp; with Pirone Productions</p>
+    <div class="meta">West End Johnnie's Underground, Boston &nbsp;&middot;&nbsp; February 1, 2025 &nbsp;&middot;&nbsp; with Pirone Productions</div>
   </div>
 </header>
 
 <main>
 
 <section>
-  <div class="wrap">
-    <div class="client">
-      <div class="ph" style="background-image:url('assets/lucaimmersive_logo.png')"></div>
-      <div>
-        <span class="ctype">Brand · Live Experience</span>
-        <b>LUCA IMMERSIVE</b>
-        <div class="d">A platform for multi-sensory live experiences, immersive installations, and a growing narrative world led by the character LUCA. This work blends visual storytelling, music, and interactive technology to transport audiences into new realities.</div>
+  <div class="wide">
+    <div class="split vl">
+      <div class="sv"><div class="logobox"><img src="assets/lucaimmersive_logo.png" alt="LUCA IMMERSIVE"></div></div>
+      <div class="st">
+        <div class="k">The Brand</div>
+        <h2>LUCA IMMERSIVE</h2>
+        <p>A platform for multi-sensory live experiences, immersive installations, and a growing narrative world led by the character LUCA. The work blends visual storytelling, music, and interactive technology to transport audiences into new realities.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <p class="lead">Something happens when an experience is truly immersive and interactive. It induces play, expression, and collaboration in ways you cannot predict. It becomes an extension of you.</p>
+  <div class="wide">
+    <p class="statement">Something happens when an experience is truly immersive and interactive. It induces play, expression, and collaboration in ways you cannot predict. <span class="em">It becomes an extension of you.</span></p>
   </div>
 </section>
 
 <section>
   <div class="wide">
-    <div class="shead">
+    <div class="lh">
       <div class="k">How It Worked</div>
       <h2>We handed the visuals to the room.</h2>
       <p>A live loop from the crowd's own light, straight onto the building, with no delay.</p>
     </div>
-    <div class="split">
+    <div class="split vl">
       <div class="sv"><div class="wf"><svg viewBox="0 0 200 210"><ellipse cx="100" cy="52" rx="60" ry="22"/><ellipse cx="100" cy="62" rx="60" ry="22"/><line x1="40" y1="52" x2="40" y2="62"/><line x1="160" y1="52" x2="160" y2="62"/><line x1="100" y1="84" x2="100" y2="90"/><circle cx="100" cy="99" r="9"/><ellipse cx="100" cy="116" rx="13" ry="4"/><path d="M87,116 V172 a13,8 0 0 0 26,0 V116"/><line x1="91" y1="132" x2="109" y2="132"/><line x1="100" y1="180" x2="100" y2="205"/><line x1="100" y1="205" x2="92" y2="198"/><line x1="100" y1="205" x2="108" y2="198"/></svg></div></div>
       <div class="st"><div class="num">01</div><h4>The crowd held the tools</h4><p>Attendees used their own laser pointers and flashlights, attached to their LUCA IMMERSIVE wristbands, to draw with light.</p></div>
     </div>
-    <div class="split">
-      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="28" y="66" width="60" height="52" rx="7"/><rect x="46" y="60" width="24" height="7" rx="2"/><circle cx="58" cy="92" r="16"/><circle cx="58" cy="92" r="7"/><path d="M88,98 C118,92 122,120 150,116"/><rect x="150" y="58" width="74" height="52" rx="4"/><line x1="150" y1="100" x2="224" y2="100"/><path d="M140,110 H234 L246,128 H128 Z"/></svg></div></div>
+    <div class="split vr">
       <div class="st"><div class="num">02</div><h4>A live feed captured it all</h4><p>A GoPro fed everything as a live stream into the computer, the eye of the whole system.</p></div>
+      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="28" y="66" width="60" height="52" rx="7"/><rect x="46" y="60" width="24" height="7" rx="2"/><circle cx="58" cy="92" r="16"/><circle cx="58" cy="92" r="7"/><path d="M88,98 C118,92 122,120 150,116"/><rect x="150" y="58" width="74" height="52" rx="4"/><line x1="150" y1="100" x2="224" y2="100"/><path d="M140,110 H234 L246,128 H128 Z"/></svg></div></div>
     </div>
-    <div class="split">
+    <div class="split vl">
       <div class="sv"><div class="wf"><svg viewBox="0 0 200 200"><rect class="rgb r" x="54" y="54" width="80" height="80" stroke="#ff5b6e" stroke-width="2"/><rect class="rgb g" x="60" y="60" width="80" height="80" stroke="#3ee08a" stroke-width="2"/><rect class="rgb b" x="66" y="66" width="80" height="80" stroke="#6c8cff" stroke-width="2"/></svg></div></div>
       <div class="st"><div class="num">03</div><h4>Effects added in real time</h4><p>The studio layered effects live in Resolume, intentional RGB splits and delay that turned the light into colorful tracers and movement echoes.</p></div>
     </div>
-    <div class="split">
-      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="14" y="74" width="40" height="26" rx="4"/><circle cx="54" cy="87" r="6"/><line x1="60" y1="87" x2="168" y2="44"/><line x1="60" y1="87" x2="168" y2="140"/><rect x="168" y="40" width="58" height="104"/><line x1="187" y1="40" x2="187" y2="144"/><line x1="207" y1="40" x2="207" y2="144"/><line x1="168" y1="75" x2="226" y2="75"/><line x1="168" y1="110" x2="226" y2="110"/><path d="M197,78 l4,10 10,4 -10,4 -4,10 -4,-10 -10,-4 10,-4 z"/></svg></div></div>
+    <div class="split vr">
       <div class="st"><div class="num">04</div><h4>Projected instantly</h4><p>The visuals were projection mapped onto the front facade and a background screen with no delay, so the room saw itself become the art in the moment.</p></div>
+      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="14" y="74" width="40" height="26" rx="4"/><circle cx="54" cy="87" r="6"/><line x1="60" y1="87" x2="168" y2="44"/><line x1="60" y1="87" x2="168" y2="140"/><rect x="168" y="40" width="58" height="104"/><line x1="187" y1="40" x2="187" y2="144"/><line x1="207" y1="40" x2="207" y2="144"/><line x1="168" y1="75" x2="226" y2="75"/><line x1="168" y1="110" x2="226" y2="110"/><path d="M197,78 l4,10 10,4 -10,4 -4,10 -4,-10 -10,-4 10,-4 z"/></svg></div></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wide">
-    <div class="shead">
-      <div class="k">Emergent Play</div>
-      <h2>Then the room took over.</h2>
-    </div>
-    <div class="split">
+    <div class="split vl">
       <div class="sv"><div class="vid"><video autoplay loop muted playsinline controls preload="auto"><source src="assets/atira_juggling_emergent_play.mp4" type="video/mp4"></video><div class="cap">Caught live: a guest grabs the camera, Atira Hope goes full flow.</div></div></div>
-      <div class="st"><p>An audience member picked up the camera, originally fixed on a table, and started pointing it at different people, letting them become part of the visual experience in new ways. Atira Hope, a local visionary artist, brought out her glowing juggling balls and went full flow mode, feeding her movement straight into the projections. It was live: a real-time fusion of art, music, and motion, evolving moment to moment.</p></div>
+      <div class="st">
+        <div class="k">Emergent Play</div>
+        <h2>Then the room took over.</h2>
+        <p>An audience member picked up the camera, originally fixed on a table, and started pointing it at people, pulling them into the visuals. Atira Hope, a local visionary artist, brought out her glowing juggling balls and went full flow, feeding her movement straight into the projections. A real-time fusion of art, music, and motion, evolving moment to moment.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wide">
-    <div class="shead">
-      <div class="k">From Anywhere</div>
-      <h2>Now the crowd controls the show. From their phone.</h2>
-    </div>
-    <div class="split">
-      <div class="st"><p>Custom code, built with OpenAI, lets anyone in the LUCA IMMERSIVE Discord change the live visuals in real time. Send a message from your phone, from anywhere in the world, and the colors and effects shift instantly in Resolume Arena. The audience stops watching and starts co-creating, with no barrier left between performer and crowd.</p></div>
+    <div class="split vr">
+      <div class="st">
+        <div class="k">From Anywhere</div>
+        <h2>The crowd controls the show. From their phone.</h2>
+        <p>Custom code, built with OpenAI, lets anyone in the LUCA IMMERSIVE Discord change the live visuals in real time. Send a message from your phone, from anywhere in the world, and the colors and effects shift instantly in Resolume Arena. The audience stops watching and starts co-creating, with no barrier left between performer and crowd.</p>
+      </div>
       <div class="sv"><div class="vid"><video autoplay loop muted playsinline controls preload="auto"><source src="assets/discord_controlled_visuals.mp4" type="video/mp4"></video><div class="cap">A Discord message changes the live visuals in Resolume, in real time.</div></div></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="shead">
-      <div class="k">Why It Matters</div>
-      <h2>Built for the week after, not just the night.</h2>
+  <div class="wide">
+    <div class="row2">
+      <div class="lcol"><div class="k">Why It Matters</div><h2>Built for the week after, not just the night.</h2></div>
+      <div class="rcol"><p>An experience like this lives far beyond the room. When the crowd creates the visuals themselves, they capture and post what they made, so the night keeps spreading to people who were never there. The people in the room are only the first audience. The largest one sees it afterward.</p></div>
     </div>
-    <p class="lead">An experience like this lives far beyond the room. When the crowd creates the visuals themselves, they capture and post what they made, so the night keeps spreading to people who were never there. The people in the room are only the first audience. The largest one sees it afterward.</p>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <p class="quote">When you give people the tools to create, they don't just participate. <span class="em">They transform the space.</span></p>
+  <div class="wide">
+    <p class="statement">When you give people the tools to create, they don't just participate. <span class="em">They transform the space.</span></p>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="shead">
-      <div class="k">For A Cause</div>
-      <h2>Light in the darkness.</h2>
-      <p>Journey of Creation channeled the energy toward a greater purpose.</p>
+  <div class="wide">
+    <div class="row2">
+      <div class="lcol"><div class="k">For A Cause</div><h2>Light in the darkness.</h2></div>
+      <div class="rcol"><p>In light of the devastating California wildfires, Journey of Creation donated 50% of all profits to the California Fire Foundation, helping families and communities rebuild and heal. There is always light in the darkness, if we choose to create it. Together, we can make a difference.</p></div>
     </div>
-    <p class="lead">In light of the devastating California wildfires, the event donated 50% of all profits to the California Fire Foundation, helping families and communities rebuild and heal. There is always light in the darkness, if we choose to create it. Together, we can make a difference.</p>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="shead">
-      <div class="k">Collaboration</div>
-      <h2>Pure, unscripted collaboration.</h2>
-      <p>We have always aimed to fold other artists into the work, like animating Atira Hope's paintings for live shows. This was something else: not planned, not scripted, just the energy of the moment shaping the visuals. This is why LUCA IMMERSIVE exists.</p>
+  <div class="wide">
+    <div class="row2">
+      <div class="lcol"><div class="k">Collaboration</div><h2>Pure, unscripted collaboration.</h2><p>Not planned, not scripted, just the energy of the moment shaping the visuals. This is why LUCA IMMERSIVE exists.</p></div>
+      <div class="rcol"><ul class="collab">
+        <li><span class="nm">Atira Hope</span><span class="ro"><a href="https://www.instagram.com/atira.hope/" target="_blank" rel="noopener">@atira.hope</a> · flow and movement artist</span></li>
+        <li><span class="nm">Cravin' Adventure Studios</span><span class="ro">System, live visuals, projection mapping</span></li>
+        <li><span class="nm">Pirone Productions</span><span class="ro">Event production</span></li>
+      </ul></div>
     </div>
-    <ul class="collab">
-      <li><span class="nm">Atira Hope</span><span class="ro"><a href="https://www.instagram.com/atira.hope/" target="_blank" rel="noopener">@atira.hope</a> · flow and movement artist</span></li>
-      <li><span class="nm">Cravin' Adventure Studios</span><span class="ro">System, live visuals, projection mapping</span></li>
-      <li><span class="nm">Pirone Productions</span><span class="ro">Event production</span></li>
-    </ul>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="brand">CRAVIN' ADVENTURE STUDIOS</div>
-  <p style="margin-top:8px;font-size:13px"><a href="mailto:cravinadventure@gmail.com">cravinadventure@gmail.com</a></p>
-  <p style="margin-top:14px;font-size:13px"><a href="https://cravinadventure.github.io/client-case-studies/">&larr; All case studies</a></p>
+  <div class="wide">
+    <div class="fr">
+      <span class="brand">CRAVIN' ADVENTURE STUDIOS</span>
+      <span><a href="https://cravinadventure.github.io/client-case-studies/">&larr; All case studies</a> &nbsp;&nbsp; <a href="mailto:cravinadventure@gmail.com">cravinadventure@gmail.com</a></span>
+    </div>
+  </div>
 </footer>
 
 <script>
