@@ -16,6 +16,11 @@
   nav .brand{font-weight:800;letter-spacing:1.6px;font-size:12.5px;text-transform:uppercase}
   nav .brand span{color:var(--electric)}
   nav .tag{font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
+  .subnav{position:sticky;top:47px;z-index:40;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:11px 16px;background:rgba(11,11,20,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .subnav a{font-size:12px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:7px 14px;border-radius:30px;transition:color .15s,background .15s}
+  .subnav a:hover{color:var(--paper);background:rgba(108,92,231,.14)}
+  section[id]{scroll-margin-top:104px}
+  .note{color:var(--muted);font-size:14px;max-width:680px;margin-top:6px}
 
   .k{font-size:12px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--electric);margin-bottom:14px}
 
@@ -98,6 +103,12 @@
   <div class="brand">CRAVIN' <span>ADVENTURE</span> STUDIOS</div>
   <div class="tag">Client Case Studies</div>
 </nav>
+<div class="subnav">
+  <a href="#overview">Overview</a>
+  <a href="#pre">Pre-Event</a>
+  <a href="#event">The Event</a>
+  <a href="#after">After</a>
+</div>
 
 <header class="hero">
   <div class="wide">
@@ -110,7 +121,7 @@
 
 <main>
 
-<section>
+<section id="overview">
   <div class="wide">
     <div class="split vl">
       <div class="sv"><div class="logobox"><img src="assets/lucaimmersive_logo.png" alt="LUCA IMMERSIVE"></div></div>
@@ -123,8 +134,20 @@
   </div>
 </section>
 
-<section>
+<section id="pre">
   <div class="wide">
+    <div class="lh">
+      <div class="k">Pre-Event · The Month Before</div>
+      <h2>The build was the show before the show.</h2>
+      <p>For the month leading up to Journey of Creation, the creation itself became the content. Behind-the-scenes vlogs, hype edits, and collabs documented the process and pulled as many people as possible into it, building the world online before anyone walked through the door.</p>
+    </div>
+    <p class="note">More of the build series gets added here over time.</p>
+  </div>
+</section>
+
+<section id="event">
+  <div class="wide">
+    <div class="k">The Event · February 1, 2025</div>
     <p class="statement">Something happens when an experience is truly immersive and interactive. It induces play, expression, and collaboration in ways you cannot predict. <span class="em">It becomes an extension of you.</span></p>
   </div>
 </section>
@@ -244,6 +267,17 @@
       <div class="lcol"><div class="k">For A Cause</div><h2>Light in the darkness.</h2></div>
       <div class="rcol"><p>In light of the devastating California wildfires, Journey of Creation donated 50% of all profits to the California Fire Foundation, helping families and communities rebuild and heal. There is always light in the darkness, if we choose to create it. Together, we can make a difference.</p></div>
     </div>
+  </div>
+</section>
+
+<section id="after">
+  <div class="wide">
+    <div class="lh">
+      <div class="k">After The Event</div>
+      <h2>The night kept going online.</h2>
+      <p>The story didn't end when the lights came up. Recaps and edits from the night keep spreading, turning one evening into an ongoing piece of content.</p>
+    </div>
+    <p class="note">Recap edits get added here over time.</p>
   </div>
 </section>
 
