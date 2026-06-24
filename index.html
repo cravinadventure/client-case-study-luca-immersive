@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: LUCA IMMERSIVE · Cravin' Adventure Studios</title>
+<style>
+  :root{--electric:#6C5CE7;--violet:#4A3BAD;--charcoal:#12121f;--ink:#0b0b14;--paper:#f4f3fb;--muted:#9a98b5;--line:rgba(108,92,231,.22);--good:#39d98a}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+
+  nav{position:sticky;top:0;z-index:50;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 28px;background:radial-gradient(55% 160% at 50% 50%, rgba(108,92,231,.42), rgba(11,11,20,.88) 70%);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .brand{font-weight:800;letter-spacing:1.6px;font-size:13px;text-transform:uppercase}
+  nav .brand span{color:var(--electric)}
+  nav .tag{font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:right}
+
+  .hero{text-align:center;padding:90px 0 44px;background:radial-gradient(900px 440px at 50% -10%, rgba(108,92,231,.32), transparent 70%),linear-gradient(180deg,#15152a 0%,var(--ink) 100%)}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--electric);margin-bottom:20px}
+  .hero h1{font-size:clamp(34px,6vw,60px);line-height:1.04;font-weight:800;letter-spacing:-1px;max-width:740px;margin:0 auto}
+  .hero .sub{max-width:560px;margin:22px auto 0;color:var(--muted);font-size:clamp(16px,2.2vw,20px)}
+
+  section{padding:58px 0;border-top:1px solid rgba(108,92,231,.08)}
+  .shead{text-align:center;max-width:620px;margin:0 auto 38px}
+  .shead .k{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--electric);margin-bottom:12px}
+  .shead h2{font-size:clamp(25px,3.8vw,36px);font-weight:800;letter-spacing:-.4px;line-height:1.12}
+  .shead p{margin-top:14px;color:var(--muted);font-size:16px}
+
+  .client{display:flex;align-items:center;justify-content:center;gap:24px;text-align:left}
+  .client .ph{width:96px;height:96px;border-radius:50%;flex:none;border:1px solid var(--line);background:radial-gradient(circle at 50% 35%, rgba(108,92,231,.5), var(--charcoal));display:flex;align-items:center;justify-content:center}
+  .client .ph svg{width:42px;height:42px;stroke:var(--paper);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(108,92,231,.7))}
+  .client .ctype{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--electric);border:1px solid var(--line);border-radius:30px;padding:4px 11px;margin-bottom:9px}
+  .client b{display:block;font-size:24px;letter-spacing:-.3px}
+  .client .d{font-size:15px;color:#cdccdf;max-width:430px;margin-top:9px;line-height:1.55}
+
+  .lead{max-width:620px;margin:0 auto;font-size:17px;line-height:1.65;color:#d6d5e6;text-align:center}
+
+  .flow{max-width:640px;margin:0 auto;display:flex;flex-direction:column}
+  .frow{display:flex;gap:20px}
+  .frail{display:flex;flex-direction:column;align-items:center;width:38px;flex:0 0 38px}
+  .fdot{width:38px;height:38px;border-radius:50%;background:var(--charcoal);border:2px solid var(--electric);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:var(--electric);flex:0 0 38px}
+  .fline{flex:1;width:2px;background:linear-gradient(var(--electric),rgba(108,92,231,.18))}
+  .fbox{flex:1;padding-bottom:28px}
+  .fbox h4{font-size:18px;font-weight:700;margin-bottom:6px}
+  .fbox p{font-size:14.5px;color:#cdccdf;line-height:1.6}
+  .frow:last-child .fline{display:none}
+  .frow:last-child .fbox{padding-bottom:0}
+
+  .quote{max-width:680px;margin:0 auto;text-align:center;font-size:clamp(22px,3.4vw,30px);font-weight:700;line-height:1.3;letter-spacing:-.4px}
+  .quote .em{color:var(--electric)}
+
+  .collab{max-width:560px;margin:0 auto;list-style:none}
+  .collab li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 2px;border-bottom:1px solid var(--line)}
+  .collab li:last-child{border-bottom:0}
+  .collab .nm{font-size:15.5px;font-weight:600;color:var(--paper)}
+  .collab .ro{font-size:13.5px;color:var(--muted)}
+  .collab a{color:var(--electric);text-decoration:none}
+
+  footer{padding:52px 0 70px;text-align:center;border-top:1px solid var(--line);color:var(--muted)}
+  footer .brand{font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--paper);font-size:14px}
+  footer a{color:var(--electric);text-decoration:none}
+
+  @media(max-width:480px){.client{flex-direction:column;text-align:center} .client .d{text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div></div>
+  <div class="brand">CRAVIN' <span>ADVENTURE</span> STUDIOS</div>
+  <div class="tag">Client Case Studies</div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">LUCA IMMERSIVE · Case Study</div>
+    <h1>The crowd became the visuals.</h1>
+    <p class="sub">A live, interactive experience where the audience's own light fed the projections in real time.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <div class="wrap">
+    <div class="client">
+      <div class="ph"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div>
+        <span class="ctype">Brand · Live Experience</span>
+        <b>LUCA IMMERSIVE</b>
+        <div class="d">Immersive, interactive experiences where the people in the room become part of the art. Live visuals by Cravin' Adventure Studios and Nicholas Centrella.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="lead">Something happens when an experience is truly immersive and interactive. It induces play, expression, and collaboration in ways you cannot predict. It becomes an extension of you.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <div class="k">How It Worked</div>
+      <h2>We handed the visuals to the room.</h2>
+      <p>A live loop from the crowd's own light, straight onto the building, with no delay.</p>
+    </div>
+    <div class="flow">
+      <div class="frow"><div class="frail"><div class="fdot">1</div><div class="fline"></div></div><div class="fbox"><h4>The crowd held the tools</h4><p>Attendees used their own laser pointers and flashlights, attached to their LUCA IMMERSIVE wristbands, to draw with light.</p></div></div>
+      <div class="frow"><div class="frail"><div class="fdot">2</div><div class="fline"></div></div><div class="fbox"><h4>A live feed captured it all</h4><p>A GoPro fed everything as a live stream into the computer, the eye of the whole system.</p></div></div>
+      <div class="frow"><div class="frail"><div class="fdot">3</div><div class="fline"></div></div><div class="fbox"><h4>Effects added in real time</h4><p>Nicholas Centrella and the studio layered effects live in Resolume, intentional RGB splits and delay that turned the light into colorful tracers and movement echoes.</p></div></div>
+      <div class="frow"><div class="frail"><div class="fdot">4</div><div class="fline"></div></div><div class="fbox"><h4>Projected instantly</h4><p>The visuals were projection mapped onto the front facade and a background screen with no delay, so the room saw itself become the art in the moment.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <div class="k">Emergent Play</div>
+      <h2>Then the room took over.</h2>
+    </div>
+    <p class="lead">An audience member picked up the camera, originally fixed on a table, and started pointing it at different people, letting them become part of the visual experience in new ways. Atira Hope, a local visionary artist, brought out her glowing juggling balls and went full flow mode, feeding her movement straight into the projections. It was live: a real-time fusion of art, music, and motion, evolving moment to moment.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="quote">When you give people the tools to create, they don't just participate. <span class="em">They transform the space.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <div class="k">Collaboration</div>
+      <h2>Pure, unscripted collaboration.</h2>
+      <p>We have always aimed to fold other artists into the work, like animating Atira Hope's paintings for live shows. This was something else: not planned, not scripted, just the energy of the moment shaping the visuals. This is why LUCA IMMERSIVE exists.</p>
+    </div>
+    <ul class="collab">
+      <li><span class="nm">Nicholas Centrella</span><span class="ro">Live visuals, real-time effects</span></li>
+      <li><span class="nm">Atira Hope</span><span class="ro"><a href="https://www.instagram.com/atira.hope/" target="_blank" rel="noopener">@atira.hope</a> · flow and movement artist</span></li>
+      <li><span class="nm">Cravin' Adventure Studios</span><span class="ro">System, live visuals, projection mapping</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="brand">CRAVIN' ADVENTURE STUDIOS</div>
+  <p style="margin-top:8px;font-size:13px"><a href="mailto:cravinadventure@gmail.com">cravinadventure@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
