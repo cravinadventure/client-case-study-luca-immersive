@@ -36,6 +36,28 @@
 
   .lead{max-width:620px;margin:0 auto;font-size:17px;line-height:1.65;color:#d6d5e6;text-align:center}
 
+  .wide{max-width:1080px;margin:0 auto;padding:0 28px}
+  .split{display:flex;align-items:center;gap:56px;padding:44px 0}
+  .split + .split{border-top:1px solid rgba(108,92,231,.10)}
+  .split:nth-of-type(even){flex-direction:row-reverse}
+  .split .sv{flex:1 1 0;min-width:0;display:flex;justify-content:center}
+  .split .st{flex:1 1 0;min-width:0}
+  .wf{width:100%;max-width:360px;aspect-ratio:1/1;border:1px solid var(--line);border-radius:18px;background:radial-gradient(circle at 50% 42%, rgba(108,92,231,.10), var(--charcoal));display:flex;align-items:center;justify-content:center;padding:30px}
+  .wf svg{width:100%;height:100%;stroke:var(--electric);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .st .num{font-size:13px;font-weight:800;letter-spacing:1.6px;color:var(--electric);margin-bottom:12px}
+  .st h4{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.4px;line-height:1.12;margin-bottom:14px}
+  .st p{font-size:16px;line-height:1.7;color:#cdccdf;max-width:480px}
+  .vid{width:100%;max-width:330px}
+  .vid video{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);background:#000}
+  .vid .cap{text-align:center;color:#9a98b5;font-size:12.5px;margin-top:10px;letter-spacing:.3px}
+  .rgb{transform-box:fill-box;transform-origin:center}
+  .rgb.r{animation:rgbR 2.6s ease-in-out infinite}
+  .rgb.b{animation:rgbB 2.6s ease-in-out infinite}
+  @keyframes rgbR{0%,100%{transform:translate(-5px,-4px)}50%{transform:translate(-13px,-9px)}}
+  @keyframes rgbB{0%,100%{transform:translate(5px,4px)}50%{transform:translate(13px,9px)}}
+  @media(max-width:820px){.split,.split:nth-of-type(even){flex-direction:column;gap:26px;text-align:center} .st p{margin:0 auto} .wf{max-width:300px}}
+  @media(prefers-reduced-motion:reduce){.rgb{animation:none}}
+
   .flow{max-width:640px;margin:0 auto;display:flex;flex-direction:column}
   .frow{display:flex;gap:20px}
   .frail{display:flex;flex-direction:column;align-items:center;width:38px;flex:0 0 38px}
@@ -103,49 +125,53 @@
 </section>
 
 <section>
-  <div class="wrap">
+  <div class="wide">
     <div class="shead">
       <div class="k">How It Worked</div>
       <h2>We handed the visuals to the room.</h2>
       <p>A live loop from the crowd's own light, straight onto the building, with no delay.</p>
     </div>
-    <div class="flow">
-      <div class="frow"><div class="frail"><div class="fdot">1</div><div class="fline"></div></div><div class="fbox"><h4>The crowd held the tools</h4><p>Attendees used their own laser pointers and flashlights, attached to their LUCA IMMERSIVE wristbands, to draw with light.</p></div></div>
-      <div class="frow"><div class="frail"><div class="fdot">2</div><div class="fline"></div></div><div class="fbox"><h4>A live feed captured it all</h4><p>A GoPro fed everything as a live stream into the computer, the eye of the whole system.</p></div></div>
-      <div class="frow"><div class="frail"><div class="fdot">3</div><div class="fline"></div></div><div class="fbox"><h4>Effects added in real time</h4><p>The studio layered effects live in Resolume, intentional RGB splits and delay that turned the light into colorful tracers and movement echoes.</p></div></div>
-      <div class="frow"><div class="frail"><div class="fdot">4</div><div class="fline"></div></div><div class="fbox"><h4>Projected instantly</h4><p>The visuals were projection mapped onto the front facade and a background screen with no delay, so the room saw itself become the art in the moment.</p></div></div>
+    <div class="split">
+      <div class="sv"><div class="wf"><svg viewBox="0 0 200 210"><ellipse cx="100" cy="52" rx="60" ry="22"/><ellipse cx="100" cy="62" rx="60" ry="22"/><line x1="40" y1="52" x2="40" y2="62"/><line x1="160" y1="52" x2="160" y2="62"/><line x1="100" y1="84" x2="100" y2="90"/><circle cx="100" cy="99" r="9"/><ellipse cx="100" cy="116" rx="13" ry="4"/><path d="M87,116 V172 a13,8 0 0 0 26,0 V116"/><line x1="91" y1="132" x2="109" y2="132"/><line x1="100" y1="180" x2="100" y2="205"/><line x1="100" y1="205" x2="92" y2="198"/><line x1="100" y1="205" x2="108" y2="198"/></svg></div></div>
+      <div class="st"><div class="num">01</div><h4>The crowd held the tools</h4><p>Attendees used their own laser pointers and flashlights, attached to their LUCA IMMERSIVE wristbands, to draw with light.</p></div>
+    </div>
+    <div class="split">
+      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="28" y="66" width="60" height="52" rx="7"/><rect x="46" y="60" width="24" height="7" rx="2"/><circle cx="58" cy="92" r="16"/><circle cx="58" cy="92" r="7"/><path d="M88,98 C118,92 122,120 150,116"/><rect x="150" y="58" width="74" height="52" rx="4"/><line x1="150" y1="100" x2="224" y2="100"/><path d="M140,110 H234 L246,128 H128 Z"/></svg></div></div>
+      <div class="st"><div class="num">02</div><h4>A live feed captured it all</h4><p>A GoPro fed everything as a live stream into the computer, the eye of the whole system.</p></div>
+    </div>
+    <div class="split">
+      <div class="sv"><div class="wf"><svg viewBox="0 0 200 200"><rect class="rgb r" x="54" y="54" width="80" height="80" stroke="#ff5b6e" stroke-width="2"/><rect class="rgb g" x="60" y="60" width="80" height="80" stroke="#3ee08a" stroke-width="2"/><rect class="rgb b" x="66" y="66" width="80" height="80" stroke="#6c8cff" stroke-width="2"/></svg></div></div>
+      <div class="st"><div class="num">03</div><h4>Effects added in real time</h4><p>The studio layered effects live in Resolume, intentional RGB splits and delay that turned the light into colorful tracers and movement echoes.</p></div>
+    </div>
+    <div class="split">
+      <div class="sv"><div class="wf"><svg viewBox="0 0 240 170"><rect x="14" y="74" width="40" height="26" rx="4"/><circle cx="54" cy="87" r="6"/><line x1="60" y1="87" x2="168" y2="44"/><line x1="60" y1="87" x2="168" y2="140"/><rect x="168" y="40" width="58" height="104"/><line x1="187" y1="40" x2="187" y2="144"/><line x1="207" y1="40" x2="207" y2="144"/><line x1="168" y1="75" x2="226" y2="75"/><line x1="168" y1="110" x2="226" y2="110"/><path d="M197,78 l4,10 10,4 -10,4 -4,10 -4,-10 -10,-4 10,-4 z"/></svg></div></div>
+      <div class="st"><div class="num">04</div><h4>Projected instantly</h4><p>The visuals were projection mapped onto the front facade and a background screen with no delay, so the room saw itself become the art in the moment.</p></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
+  <div class="wide">
     <div class="shead">
       <div class="k">Emergent Play</div>
       <h2>Then the room took over.</h2>
     </div>
-    <p class="lead">An audience member picked up the camera, originally fixed on a table, and started pointing it at different people, letting them become part of the visual experience in new ways. Atira Hope, a local visionary artist, brought out her glowing juggling balls and went full flow mode, feeding her movement straight into the projections. It was live: a real-time fusion of art, music, and motion, evolving moment to moment.</p>
-    <div style="max-width:340px;margin:30px auto 0">
-      <video autoplay loop muted playsinline controls preload="auto" style="width:100%;height:auto;display:block;border-radius:16px;border:1px solid rgba(108,92,231,.22);background:#000">
-        <source src="assets/atira_juggling_emergent_play.mp4" type="video/mp4">
-      </video>
-      <p style="text-align:center;color:#9a98b5;font-size:12.5px;margin-top:10px;letter-spacing:.3px">Caught live: a guest grabs the camera, Atira Hope goes full flow.</p>
+    <div class="split">
+      <div class="sv"><div class="vid"><video autoplay loop muted playsinline controls preload="auto"><source src="assets/atira_juggling_emergent_play.mp4" type="video/mp4"></video><div class="cap">Caught live: a guest grabs the camera, Atira Hope goes full flow.</div></div></div>
+      <div class="st"><p>An audience member picked up the camera, originally fixed on a table, and started pointing it at different people, letting them become part of the visual experience in new ways. Atira Hope, a local visionary artist, brought out her glowing juggling balls and went full flow mode, feeding her movement straight into the projections. It was live: a real-time fusion of art, music, and motion, evolving moment to moment.</p></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
+  <div class="wide">
     <div class="shead">
       <div class="k">From Anywhere</div>
       <h2>Now the crowd controls the show. From their phone.</h2>
     </div>
-    <p class="lead">Custom code, built with OpenAI, lets anyone in the LUCA IMMERSIVE Discord change the live visuals in real time. Send a message from your phone, from anywhere in the world, and the colors and effects shift instantly in Resolume Arena. The audience stops watching and starts co-creating, with no barrier left between performer and crowd.</p>
-    <div style="max-width:340px;margin:30px auto 0">
-      <video autoplay loop muted playsinline controls preload="auto" style="width:100%;height:auto;display:block;border-radius:16px;border:1px solid rgba(108,92,231,.22);background:#000">
-        <source src="assets/discord_controlled_visuals.mp4" type="video/mp4">
-      </video>
-      <p style="text-align:center;color:#9a98b5;font-size:12.5px;margin-top:10px;letter-spacing:.3px">A Discord message changes the live visuals in Resolume, in real time.</p>
+    <div class="split">
+      <div class="st"><p>Custom code, built with OpenAI, lets anyone in the LUCA IMMERSIVE Discord change the live visuals in real time. Send a message from your phone, from anywhere in the world, and the colors and effects shift instantly in Resolume Arena. The audience stops watching and starts co-creating, with no barrier left between performer and crowd.</p></div>
+      <div class="sv"><div class="vid"><video autoplay loop muted playsinline controls preload="auto"><source src="assets/discord_controlled_visuals.mp4" type="video/mp4"></video><div class="cap">A Discord message changes the live visuals in Resolume, in real time.</div></div></div>
     </div>
   </div>
 </section>
